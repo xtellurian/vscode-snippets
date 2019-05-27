@@ -6,16 +6,7 @@
 	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
 	// Placeholders with the same ids are connected.
 	// Example:
-	"Print to console": {
-		"scope": "javascript,typescript",
-		"prefix": "log",
-		"body": [
-			"console.log('$1');",
-			"$2"
-		],
-		"description": "Log output to console"
-	},
-	"Bash getops": {
+	"Bash getopts": {
 		"scope": "shellscript",
 		"prefix": "getopts",
 		"body": [
@@ -28,6 +19,18 @@
 			"    esac",
 			"done"
 		],
-		"description": "Flagg arguments to a bash script"
+		"description": "Flag arguments to a bash script"
+	},
+	"Bash ifthen": {
+		"scope": "shellscript",
+		"prefix": "if",
+		"body": [
+			"if [ \\$1 -gt 100 ]",
+			"then",
+			"    echo \"Hey that's a large number.\"",
+			"    pwd",
+			"fi"
+		],
+		"description": "If-Then"
 	}
 }
